@@ -1,0 +1,30 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2076259",
+      "name": "列表",
+      "font_class": "liebiao",
+      "unicode": "e88f",
+      "unicode_decimal": 59535
+    },
+    {
+      "icon_id": "10232759",
+      "name": "宫格排列",
+      "font_class": "gonggepailie",
+      "unicode": "e78c",
+      "unicode_decimal": 59276
+    },
+    {
+      "icon_id": "35594257",
+      "name": "显示菜单",
+      "font_class": "xianshicaidan",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    }
+  ]
+}

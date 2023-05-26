@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "iconfont"; /* Project id  */
+  src: local('./fonts/iconfont.ttf') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-liebiao:before {
+  content: "\e88f";
+  color: red;
+  font-size: 20;
+}
+
+.icon-gonggepailie:before {
+  content: "\e78c";
+}
+
+.icon-xianshicaidan:before {
+  content: "\e608";
+}
+

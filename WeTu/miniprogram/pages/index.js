@@ -1,11 +1,11 @@
-// pages/index/index.js
+// pages/index.js
 Page({
 
   /**
    * Page initial data
    */
   data: {
-    active: true
+
   },
 
   /**
