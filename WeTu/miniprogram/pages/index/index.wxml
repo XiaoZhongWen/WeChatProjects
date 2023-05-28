@@ -1,6 +1,11 @@
-<navigation-bar active="{{active}}">
-  <view class="left" slot="left">
-    <view class="iconfont icon-liebiao"></view>
-  </view>
-  <view class="center" slot="center">微图</view>
-</navigation-bar>
+<view class="container">
+  <navigation-bar active="{{active}}">
+    <view class="left" slot="left">
+      <m-icon name="xianshicaidan" ontap="onTapSliderMenu" />
+      <m-icon name="fengexian line" />
+      <m-icon name="liebiao1" />
+    </view>
+    <view class="center" slot="center">微图</view>
+  </navigation-bar>
+  <add-button class="btn_add" ontap="onTabAddBtn" />
+</view>

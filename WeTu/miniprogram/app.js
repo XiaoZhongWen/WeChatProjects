@@ -14,6 +14,9 @@ App({
       });
     }
 
-    this.globalData = {};
+    this.globalData = {
+      theme: "#67C27F",
+      backgroundColor: "#f6f6f6"
+    };
   }
 });

@@ -1,1 +1,10 @@
-@import "../../style/iconfont/iconfont.wxss"
+.line {
+  color: lightgray;
+}
+
+.btn_add {
+  position: fixed;
+  left: 50%;
+  bottom: 80px;
+  transform: translateX(-50%);
+}

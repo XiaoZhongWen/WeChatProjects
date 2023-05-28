@@ -1,27 +1,38 @@
 @font-face {
-  font-family: "iconfont"; /* Project id  */
-  src: local('./fonts/iconfont.ttf') format('truetype');
+  font-family: "iconfont"; /* Project id 4090463 */
+  src: url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAQ4AAsAAAAACqAAAAPqAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHFQGYACDSAqHeIZYATYCJAMYCw4ABCAFhGcHYRstCcgeA+7G6yV/fi6ZUZkKIsqps3eSIkoawiK6TCy3bBcQHi8CevEb2PvulxmCnopQR/LsABX6XJsS/d7g+VnFwq0BAnbM/nG/4s0GyTezwrsqlUHVRxX2j3L8Zum006LFW5zOZDk5MpOqpWjtN70PAriEqIdq0uzuEQ7HDOwJTjAIkAJ1rYwZqQm2jw4MBUuwzZbpqQayBhPUcnUbWJ3/vHylktigMDXBVTr8XMLfB/WhtQ5iAejXpAgE7K4AE9BA2Y25ZI46MM1aWSiLxuW2XqcVwMdGYUz6HfaHnA81P7SOxWhpgojgh//yQDDRGCgQCxh8wrUpmvBBxTbkZrSh4Iw5sKFhrAkbBoyt0YcCwJpwl0yQgYAsJKCWJSco7LDSzBU/MdEnXRLkdIif4CfO9nX4WOQIyk+4wVEvXnGjx0XHv0D42GhPohiBKxExw8P9yFnR4XNefPQMKjg9LLIh021s6jYPNW1yx/qRY+HjWH40ONLlNBdTXI6e7UYeioQfeV70AQT3ewkUKA8lC90eoxJ2zGSm80yG7I6fHT24NdhywE2IHNoW3n7YG7wmo7u+LcZH07puDFK7bDhECzd3Y8dw+MEqcjwtLWV68deUrJP/OyFCoTqh3cZsP0DhWOFYpNAw+5QDx8Zpd9LaDN9PykryYfNukyG7IZWLFqriNn6oiw0bYlurG81U2bvpWdHkok9jVX7Mj/rOLfepe9t55tx2XwjE18aPx5kplb7Tb9oKLFmqseHD3JhXyckvTjCmck+qvm/pZq1NW5vlnpaXXPQpcWghTvxI7FroKXH7lVnp9NwhxzLZdMqW+3dr2RxfsdjnJ7cgcwQfokerrwAqpO5C7LR+oFsBsad6j86G2B+9WJt/5R1ps8mZ/vnqfLM9Qy57v2XG/lwKsoEL+ysMCPxxjX0MJzXuSbAMbux4BwSwWIBNn1CAiwv8UyPJvJ3KlGLMAjGl1KCIIwc0NoVRBq40mHhUAgubuuBShqZne6QwwRpiOEBxFgoQEjkKigROgCaRaygD9wxM0vkIFon8A5duxV/Oo7gMbtyYOktczEQ7OCcVmXs+6j3rZaA2lH3mNlikcVo+1C1fcuLm44hhmp71KQrVpBzxYn83DiFjmZQdiz4yU3qZjysM495kJMZHONUw0jEJGeQdMpKQJSqdvLf/3j2mLQWkGaKefc1Acjk6UpHyhAxQl4ZkNOZGtp7shTZjik7RXsM0WYQ0u/tYCAsZMoHfyWFCN2KEQ66YU0FONszUMFreFF/idYBL8GGWKNFiiCmWxGGNGkmG8s6woUnzm6W0NWYkLyzl7dw+PWC2G4wVZCUlAAAA') format('woff2'),
+  url('iconfont.woff?t=1685243939815') format('woff'),
+  url('iconfont.ttf?t=1685243939815') format('truetype');
 }
 
 .iconfont {
   font-family: "iconfont" !important;
   font-size: 16px;
   font-style: normal;
+  font-size: 36rpx;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-liebiao:before {
-  content: "\e88f";
-  color: red;
-  font-size: 20;
+  content: "\e64b";
 }
 
-.icon-gonggepailie:before {
-  content: "\e78c";
+.icon-liebiao1:before {
+  content: "\e639";
 }
 
 .icon-xianshicaidan:before {
   content: "\e608";
 }
 
+.icon-fengexian:before {
+  content: "\e64b";
+}
+
+.icon-jiahao:before {
+  content: "\e602";
+}

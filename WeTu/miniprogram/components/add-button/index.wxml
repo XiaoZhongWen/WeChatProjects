@@ -1,0 +1,3 @@
+<view class="container" style="background-color: {{theme}};">
+  <m-icon name="jiahao add" style="color: {{backgroundColor}};" />
+</view>

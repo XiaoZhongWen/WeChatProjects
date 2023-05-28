@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "navigation-bar":"../../components/navigation-bar/index"
+    "navigation-bar":"../../components/navigation-bar/index",
+    "add-button":"../../components/add-button/index"
   },
   "navigationStyle": "custom"
 }

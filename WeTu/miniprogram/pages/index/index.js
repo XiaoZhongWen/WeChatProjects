@@ -62,5 +62,20 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+
+  // 隐藏侧边栏
+  ontapContainer(e) {
+    console.log(e);
+  },
+
+  // 显示侧边栏
+  onTapSliderMenu(e) {
+    console.log(e);
+  },
+
+  // 显示url编辑视图
+  onTabAddBtn(e) {
+    console.log(e);
   }
 })
