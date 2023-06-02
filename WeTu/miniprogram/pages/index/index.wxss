@@ -1,10 +1,16 @@
-.line {
+.container .left .line {
   color: lightgray;
 }
 
-.btn_add {
+.container .btn_add {
   position: fixed;
   left: 50%;
   bottom: 80px;
   transform: translateX(-50%);
+}
+
+.container .left_drawer {
+  width:50vw;
+	height: 100vh;
+	background:white;
 }

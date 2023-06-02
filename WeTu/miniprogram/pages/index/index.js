@@ -5,7 +5,8 @@ Page({
    * Page initial data
    */
   data: {
-    active: true
+    active: true,
+    showLeftDrawer: false
   },
 
   /**
@@ -71,7 +72,9 @@ Page({
 
   // 显示侧边栏
   onTapSliderMenu(e) {
-    console.log(e);
+    this.setData({
+      showLeftDrawer: !this.data.showLeftDrawer
+    });
   },
 
   // 显示url编辑视图

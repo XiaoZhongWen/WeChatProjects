@@ -8,4 +8,7 @@
     <view class="center" slot="center">微图</view>
   </navigation-bar>
   <add-button class="btn_add" ontap="onTabAddBtn" />
+  <drawer mode="left" visible="{{ showLeftDrawer }}" bind:close="onTapSliderMenu">
+    <view class="left_drawer"></view>
+  </drawer>
 </view>
