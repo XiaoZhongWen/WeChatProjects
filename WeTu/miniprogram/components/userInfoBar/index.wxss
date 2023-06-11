@@ -1,0 +1,5 @@
+/* components/userInfoBar/index.wxss */
+.container {
+  font-weight: bold;
+  color: gray;
+}

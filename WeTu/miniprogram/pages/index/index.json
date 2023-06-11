@@ -2,7 +2,9 @@
   "usingComponents": {
     "navigation-bar": "../../components/navigation-bar/index",
     "add-button": "../../components/add-button/index",
-    "drawer": "../../components/drawer/index"
+    "van-popup": "@vant/weapp/popup/index",
+    "user-info-bar": "../../components/userInfoBar/index",
+    "grid-icon": "../../components/grid-icon/index"
   },
   "navigationStyle": "custom"
 }

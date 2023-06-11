@@ -13,7 +13,8 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad(options) {
-
+    // 初始化页面样式
+    this.initializeStyle();
   },
 
   /**
@@ -65,13 +66,31 @@ Page({
 
   },
 
-  // 隐藏侧边栏
-  ontapContainer(e) {
-    console.log(e);
+  /**
+   * 初始化页面样式
+   */
+  initializeStyle() {
+    var clientRect = wx.getMenuButtonBoundingClientRect();
+    var isSupport = !!clientRect;
+    var rect = clientRect ? clientRect : null;
+    var that = this;
+    wx.getSystemInfo({
+      success: function success(res) {
+        var ios = !!(res.system.toLowerCase().search("ios") + 1);
+        var globalData = getApp().globalData;
+        var statusBarHeight = res.statusBarHeight;
+        var topBarHeight = ios ? (44 + statusBarHeight) : (48 + statusBarHeight)
+        that.setData({
+          sliderBarMarginTop: topBarHeight + "px",
+          sliderBarWidth: globalData.sliderBarWidth + "px",
+          sliderBarHeight: res.windowHeight - topBarHeight + "px"
+        });
+      }
+    });
   },
 
-  // 显示侧边栏
-  onTapSliderMenu(e) {
+  // 显示|隐藏侧边栏
+  showOrHidenLeftSlider(e) {
     this.setData({
       showLeftDrawer: !this.data.showLeftDrawer
     });

@@ -21,9 +21,9 @@
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
-  "style": "v2",
   "debug": true,
   "usingComponents": {
-    "m-icon": "./components/icon"
+    "m-icon": "./components/icon",
+    "van-popup": "@vant/weapp/popup/index"
   }
 }

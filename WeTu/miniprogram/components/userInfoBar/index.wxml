@@ -1,0 +1,4 @@
+<!--components/userInfoBar/index.wxml-->
+<view class="container">
+  <text>{{name}}</text>
+</view>

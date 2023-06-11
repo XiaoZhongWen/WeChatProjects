@@ -1,14 +1,27 @@
 <view class="container">
   <navigation-bar active="{{active}}">
+  <!-- 导航栏左侧menu -->
     <view class="left" slot="left">
-      <m-icon name="xianshicaidan" ontap="onTapSliderMenu" />
+      <m-icon name="xianshicaidan" bind:tap="showOrHidenLeftSlider" />
       <m-icon name="fengexian line" />
       <m-icon name="liebiao1" />
     </view>
+    <!-- 导航栏title -->
     <view class="center" slot="center">微图</view>
   </navigation-bar>
   <add-button class="btn_add" ontap="onTabAddBtn" />
-  <drawer mode="left" visible="{{ showLeftDrawer }}" bind:close="onTapSliderMenu">
-    <view class="left_drawer"></view>
-  </drawer>
 </view>
+
+<!-- 侧边栏 -->
+<van-popup 
+  class="sliderBar"
+  show="{{showLeftDrawer}}"
+  position="left"
+  bind:close="showOrHidenLeftSlider">
+  <view class="container" style="width: {{sliderBarWidth}}; height: {{sliderBarHeight}}; margin-top: {{sliderBarMarginTop}};">
+    <!-- 用户信息栏 -->
+    <user-info-bar class="user-info-bar-custom" name="Julien"/>
+    <!-- 宫格头像 -->
+    
+  </view>
+</van-popup>
