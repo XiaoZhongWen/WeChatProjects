@@ -1,5 +1,5 @@
 <view class="weui-navigation-bar {{ext-class}}" bindtouchstart="doubleClick">
-  <view class="{{active? 'navigator-active' : 'navigator-normal'}} weui-navigation-bar__inner {{ios? 'ios' : 'android'}}" style="padding-top: {{statusBarHeight}}px; {{innerPaddingRight}}; {{innerWidth}}">
+  <view class="{{active? 'navigator-active' : 'navigator-normal'}} weui-navigation-bar__inner {{ios? 'ios' : 'android'}}" style="padding-top: {{statusBarHeight}}rpx; {{innerPaddingRight}}; {{innerWidth}}">
     <view class="weui-navigation-bar__left" style="{{leftWidth}}">
       <slot name="left"></slot>
     </view>

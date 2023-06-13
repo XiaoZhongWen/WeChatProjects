@@ -17,7 +17,7 @@ App({
     this.globalData = {
       theme: "#67C27F",
       backgroundColor: "#f6f6f6",
-      sliderBarWidth: 240
+      sliderBarWidth: 480
     };
   }
 });

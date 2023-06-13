@@ -20,8 +20,8 @@
   bind:close="showOrHidenLeftSlider">
   <view class="container" style="width: {{sliderBarWidth}}; height: {{sliderBarHeight}}; margin-top: {{sliderBarMarginTop}};">
     <!-- 用户信息栏 -->
-    <user-info-bar class="user-info-bar-custom" name="Julien"/>
+    <user-info-bar class="info-bar" name="Julien"/>
     <!-- 宫格头像 -->
-    
+    <grid-icon class="grid-container" />
   </view>
 </van-popup>

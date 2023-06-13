@@ -14,16 +14,16 @@
   left: 0;
   display: flex;
   align-items: center;
-  padding-right: 190px;
+  padding-right: 380rpx;
   z-index: 5001;
-  width: calc(100% - 190px);
-  height: 44px;
+  width: calc(100% - 380rpx);
+  height: 88rpx;
 }
 
 .weui-navigation-bar__inner .weui-navigation-bar__left {
   position: relative;
-  width: 190px;
-  padding-left: 15px;
+  width: 380rpx;
+  padding-left: 30rpx;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -33,7 +33,7 @@
 }
 
 .weui-navigation-bar__inner .weui-navigation-bar__center {
-  font-size: 17px;
+  font-size: 34rpx;
   text-align: center;
   position: relative;
   flex: 1;

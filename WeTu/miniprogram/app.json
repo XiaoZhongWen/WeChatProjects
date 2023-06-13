@@ -11,8 +11,7 @@
     "pages/updateRecordResult/index",
     "pages/updateRecordSuccess/index",
     "pages/sumRecord/index",
-    "pages/sumRecordResult/index",
-    "pages/index"
+    "pages/sumRecordResult/index"
   ],
   "window": {
     "backgroundColor": "#F8F8F8",

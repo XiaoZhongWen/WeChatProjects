@@ -1,1 +1,15 @@
-/* components/grid-icon/index.wxss */
+.container {
+  display: flex;
+}
+
+.container .column {
+  display: flex;
+  flex-direction: column;
+}
+
+.container .column .square {
+  background-color: gray;
+  width: 32rpx;
+  height: 32rpx;
+  margin: 2rpx;
+}

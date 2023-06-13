@@ -78,12 +78,12 @@ Page({
       success: function success(res) {
         var ios = !!(res.system.toLowerCase().search("ios") + 1);
         var globalData = getApp().globalData;
-        var statusBarHeight = res.statusBarHeight;
-        var topBarHeight = ios ? (44 + statusBarHeight) : (48 + statusBarHeight)
+        var statusBarHeight = res.statusBarHeight * 2;
+        var topBarHeight = ios ? (88 + statusBarHeight) : (96 + statusBarHeight)
         that.setData({
-          sliderBarMarginTop: topBarHeight + "px",
-          sliderBarWidth: globalData.sliderBarWidth + "px",
-          sliderBarHeight: res.windowHeight - topBarHeight + "px"
+          sliderBarMarginTop: topBarHeight + "rpx",
+          sliderBarWidth: globalData.sliderBarWidth + "rpx",
+          sliderBarHeight: res.windowHeight * 2 - topBarHeight + "rpx"
         });
       }
     });

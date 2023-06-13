@@ -1,8 +1,4 @@
 {
   "component": true,
-  "styleIsolation": "apply-shared",
-  "usingComponents": {},
-  "externalClasses": [
-    "user-info-bar-custom"
-  ]
+  "usingComponents": {}
 }

@@ -49,15 +49,15 @@ Component({
         // 调整导航栏尺寸
         success: function success(res) {
           var ios = !!(res.system.toLowerCase().search("ios") + 1);
-          var statusBarHeight = res.statusBarHeight;
-          var topBarHeight = ios ? (44 + statusBarHeight) : (48 + statusBarHeight);
+          var statusBarHeight = res.statusBarHeight * 2;
+          var topBarHeight = ios ? (88 + statusBarHeight) : (96 + statusBarHeight);
           that.setData({
             ios:ios,
             topBarHeight: topBarHeight,
             statusBarHeight: statusBarHeight,
-            innerWidth: isSupport ? "width:" + rect.left + "px" : "",
-            innerPaddingRight: isSupport ? "padding-right:" + (res.windowWidth - rect.left) + "px" : "",
-            leftWidth: isSupport ? "width:" + (res.windowWidth - rect.left) + "px" : ""
+            innerWidth: isSupport ? "width:" + rect.left * 2 + "rpx" : "",
+            innerPaddingRight: isSupport ? "padding-right:" + (res.windowWidth - rect.left) * 2 + "rpx" : "",
+            leftWidth: isSupport ? "width:" + (res.windowWidth - rect.left) * 2 + "rpx" : ""
           });
         }
       });
