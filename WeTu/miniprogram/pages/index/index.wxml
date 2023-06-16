@@ -1,15 +1,12 @@
 <view class="container">
-  <navigation-bar active="{{active}}">
-  <!-- 导航栏左侧menu -->
+  <van-nav-bar class="nav" title="微图">
     <view class="left" slot="left">
       <m-icon name="xianshicaidan" bind:tap="showOrHidenLeftSlider" />
       <m-icon name="fengexian line" />
       <m-icon name="liebiao1" />
     </view>
-    <!-- 导航栏title -->
-    <view class="center" slot="center">微图</view>
-  </navigation-bar>
-  <add-button class="btn_add" ontap="onTabAddBtn" />
+  </van-nav-bar>
+  <add-button class="btn_add" ontap="showOrHidenBottomSlider" />
 </view>
 
 <!-- 侧边栏 -->
@@ -22,6 +19,35 @@
     <!-- 用户信息栏 -->
     <user-info-bar class="info-bar" name="Julien"/>
     <!-- 宫格头像 -->
-    <grid-icon class="grid-container" />
+    <grid-icon class="grid-container" album="{{album}}" />
+    <!-- 新手指南 -->
+    <van-cell class="guider" custom-class="guider-cell" title="🐣 新手指南" url="/pages/beginnerGuide/index" is-link />
+    <!-- 反馈意见 -->
+    <van-cell class="guider" custom-class="guider-cell" border="{{false}}" title="🐚 反馈意见" url="/pages/feedback/index" is-link />
+  </view>
+</van-popup>
+
+<!-- 底边栏 -->
+<van-popup
+  class="bottomBar"
+  show="{{showBottomDrawer}}"
+  position="bottom"
+  bind:close="showOrHidenBottomSlider">
+  <view class="container" id="bottomContainer">
+    <!-- 工具栏 -->
+    <toolBar class="toolBar" />
+    <!-- 输入框 -->
+    <van-field
+      class="inputField"
+      value="{{ inputValue }}"
+      placeholder="请输入链接地址"
+      border="{{ false }}"
+      focus="{{focus}}"
+      auto-focus
+      type="textarea"
+      show-confirm-bar="{{false}}"
+      autosize
+      bind:change="onChange"
+    />
   </view>
 </van-popup>

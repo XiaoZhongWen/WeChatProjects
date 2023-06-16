@@ -4,6 +4,7 @@
   align-items: center;
   height: 80rpx;
   font-weight: bold;
-  color: gray;
+  font-size: 40rpx;
+  color: #333333;
   width: 100%;
 }

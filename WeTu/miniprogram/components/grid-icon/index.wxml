@@ -1,9 +1,17 @@
-<view class="container">
-  <block wx:for="{{[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]}}">
+<wxs module="utils" src="../../utils/utils.wxs"></wxs>
+
+<view class="container" bindtap="onTapGrid">
+  <block wx:for="{{weeks}}" wx:for-item="week" wx:key="index">
     <view class="column">
-      <block wx:for="{{[1, 2, 3, 4, 5, 6, 7]}}">
-        <icon class="square" />
+      <block wx:for="{{days}}" wx:for-item="day" wx:key="index">
+        <icon 
+          class="square {{utils.isToday(week, day)? 'today': ''}} {{utils.isMarked(week, day, album)? 'mark': ''}}" 
+          data-column="{{week}}" 
+          data-row="{{day}}" />
       </block>
+      <view class="flag" wx:if="{{utils.contain(flags, index)}}">
+        <text>{{utils.month(flags, index)}}</text>
+      </view>
     </view>
   </block>
 </view>

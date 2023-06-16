@@ -1,8 +1,10 @@
 .container {
-  width: 80rpx;
-  height: 80rpx;
+  width: 100rpx;
+  height: 100rpx;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 10rpx;
+  border-radius: 20rpx;
+  font-weight: bold;
+  background-color: #43bd63;
 }

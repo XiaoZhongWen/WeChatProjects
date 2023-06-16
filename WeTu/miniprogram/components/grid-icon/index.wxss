@@ -8,8 +8,26 @@
 }
 
 .container .column .square {
-  background-color: gray;
+  background-color: rgba(226, 226, 226, 0.6);
   width: 32rpx;
   height: 32rpx;
-  margin: 2rpx;
+  margin: 8rpx;
+  border-radius: 4rpx;
+  box-sizing: border-box;
+}
+
+.container .column .today {
+  border-color: #67C27F;
+  border-width: 2rpx;
+  border-style: solid;
+}
+
+.container .column .mark {
+  background-color: #67C27F
+}
+
+.container .column .flag {
+  font-size: 20rpx;
+  padding-top: 12rpx;
+  color: rgb(150, 150, 150);
 }

@@ -3,8 +3,12 @@
     "navigation-bar": "../../components/navigation-bar/index",
     "add-button": "../../components/add-button/index",
     "van-popup": "@vant/weapp/popup/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-nav-bar": "@vant/weapp/nav-bar/index",
     "user-info-bar": "../../components/userInfoBar/index",
-    "grid-icon": "../../components/grid-icon/index"
+    "grid-icon": "../../components/grid-icon/index",
+    "toolBar": "../../components/toolBar/index"
   },
   "navigationStyle": "custom"
 }

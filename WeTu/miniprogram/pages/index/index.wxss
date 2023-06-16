@@ -1,4 +1,8 @@
-.container .left .line {
+.container .nav {
+  width: 100%;
+}
+
+.container .nav .left .line {
   color: lightgray;
 }
 
@@ -9,7 +13,7 @@
   transform: translateX(-50%);
 }
 
-.sliderBar .container{
+.sliderBar .container {
   display: flex;
   margin-left: 32rpx;
 }
@@ -18,6 +22,30 @@
   width: 100%;
 }
 
+.sliderBar .container .guider {
+  width: 100%;
+}
+
+.sliderBar .container .guider-cell {
+  padding-left: 0;
+  font-size: 24rpx;
+  font-weight: bold;
+  color: #333333;
+}
+
 .sliderBar .container .grid-container {
   width: 100%;
+}
+
+.bottomBar .container {
+  width: 100%;
+}
+
+.bottomBar .container .inputField {
+  width: 100%;
+}
+
+.bottomBar .container .toolBar {
+  width: 100%;
+  height: 60rpx;
 }

@@ -1,0 +1,63 @@
+// require("../miniprogram_npm/dateformat/index.js")
+
+function contain(array, item) {
+  return array.indexOf(item) > -1
+}
+
+function indexOfContainer(array, item) {
+  return array.indexOf(item)
+}
+
+function isToday(week, day) {
+  var date = getDate(Date.now())
+  var index = date.getDay()
+  return week == 12 && index == day
+}
+
+function isMarked(week, day, album) {
+  // 获取当前日期
+  var date = getDate(Date.now())
+  // 获取当前的星期数
+  var index = date.getDay()
+  var todayColumnIndex = 12
+  var todayRowIndex = index
+  // 计算间隔的周数
+  var deltaWeek = 12 - week
+  var deltaDay = index - day
+  // 计算间隔的天数
+  var days = deltaWeek * 7 + (index - day)
+  // 获取创建相册的日期集合
+  var dates = album.map(function(value, index, array) {
+    var str = value.date;
+    return getDate(str)
+  })
+  // 计算热力图方格对应的日期
+  var timestamp = date.getTime() - days * 24 * 60 * 60 * 1000
+  var gridDate = getDate(timestamp)
+  // 如果热力图方格对应的日期与创建相册的日期在年、月、日上相等则返回true, 否则返回false
+  var marked = false
+  for (i = 0; i < dates.length; i++) {
+    var item = dates[i]
+    marked = item.getFullYear() === gridDate.getFullYear() &&
+    item.getMonth() === gridDate.getMonth() &&
+    item.getDate() === gridDate.getDate()
+    if (marked === true) {
+      break
+    }
+  }
+  return marked
+}
+
+function month(array, item) {
+  var index = array.length - indexOfContainer(array, item) - 1
+  var date = getDate(Date.now())
+  var month = date.getMonth() + 1
+  return month - index + "月"
+}
+
+module.exports = {
+  contain: contain,
+  month: month,
+  isToday: isToday,
+  isMarked: isMarked,
+}

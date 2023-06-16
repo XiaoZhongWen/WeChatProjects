@@ -11,7 +11,11 @@
     "pages/updateRecordResult/index",
     "pages/updateRecordSuccess/index",
     "pages/sumRecord/index",
-    "pages/sumRecordResult/index"
+    "pages/sumRecordResult/index",
+    "pages/beginnerGuide/index",
+    "pages/feedback/index",
+    "pages/photoList/index",
+    "pages/albumList/index"
   ],
   "window": {
     "backgroundColor": "#F8F8F8",

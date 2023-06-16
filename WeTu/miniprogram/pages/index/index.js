@@ -5,8 +5,28 @@ Page({
    * Page initial data
    */
   data: {
-    active: true,
-    showLeftDrawer: false
+    focus: false,
+    showLeftDrawer: false,
+    showBottomDrawer: true,
+    inputValue: '',
+    album: [
+      {
+        "id": "",
+        "coverName": "",
+        "date": "2023-06-13 11:30:08",
+        "url": "",
+        "count": 9,
+        "isExpired": false
+      },
+      {
+        "id": "",
+        "coverName": "",
+        "date": "2023-06-14 10:30:08",
+        "url": "",
+        "count": 9,
+        "isExpired": false
+      }
+    ]
   },
 
   /**
@@ -79,11 +99,10 @@ Page({
         var ios = !!(res.system.toLowerCase().search("ios") + 1);
         var globalData = getApp().globalData;
         var statusBarHeight = res.statusBarHeight * 2;
-        var topBarHeight = ios ? (88 + statusBarHeight) : (96 + statusBarHeight)
         that.setData({
-          sliderBarMarginTop: topBarHeight + "rpx",
+          sliderBarMarginTop: statusBarHeight + "rpx",
           sliderBarWidth: globalData.sliderBarWidth + "rpx",
-          sliderBarHeight: res.windowHeight * 2 - topBarHeight + "rpx"
+          sliderBarHeight: res.windowHeight * 2 + "rpx"
         });
       }
     });
@@ -96,8 +115,15 @@ Page({
     });
   },
 
-  // 显示url编辑视图
-  onTabAddBtn(e) {
-    console.log(e);
+  // 显示|隐藏底边栏
+  showOrHidenBottomSlider(e) {
+    this.setData({
+      showBottomDrawer: !this.data.showBottomDrawer,
+      focus: !this.data.focus
+    });
+  },
+
+  onChange(e) {
+    
   }
 })
