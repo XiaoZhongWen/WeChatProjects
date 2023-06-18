@@ -6,7 +6,7 @@
       <m-icon name="liebiao1" />
     </view>
   </van-nav-bar>
-  <add-button class="btn_add" ontap="showOrHidenBottomSlider" />
+  <add-button class="btn_add" ontap="showBottomSlider" />
 </view>
 
 <!-- 侧边栏 -->
@@ -32,21 +32,25 @@
   class="bottomBar"
   show="{{showBottomDrawer}}"
   position="bottom"
-  bind:close="showOrHidenBottomSlider">
-  <view class="container" id="bottomContainer">
+  bind:close="hidenBottomSlider">
+  <view class="container" id="bottomContainer" bind:onTagTap="appendUrl">
     <!-- 工具栏 -->
     <toolBar class="toolBar" />
     <!-- 输入框 -->
     <van-field
       class="inputField"
-      value="{{ inputValue }}"
+      model:value="{{ inputValue }}"
       placeholder="请输入链接地址"
       border="{{ false }}"
       focus="{{focus}}"
+      hold-keyboard="{{holdKeyboard}}"
       auto-focus
       type="textarea"
       show-confirm-bar="{{false}}"
       autosize
+      clearable="{{true}}"
+      always-embed="{{true}}"
+      extra-event-params="{{true}}"
       bind:change="onChange"
     />
   </view>

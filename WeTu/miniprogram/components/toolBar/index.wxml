@@ -1,1 +1,11 @@
-<view class="container"></view>
+<view class="container" bindtap="onTap">
+  <van-tag round type="success" size="medium" data-value="https://">https://</van-tag>
+  <van-tag round type="success" size="medium" data-value="http://">http://</van-tag>
+  <van-tag round type="success" size="medium" data-value=".com">.com</van-tag>
+  <van-tag round type="success" size="medium" data-value="/">/</van-tag>
+  <van-tag round type="success" size="medium" data-value=".">.</van-tag>
+  <van-tag round type="warning" size="medium" data-value="done">发送</van-tag>
+  <!-- <van-tag round type="warning" size="medium">
+    <m-icon name="chehui" data-value="0" />
+  </van-tag> -->
+</view>

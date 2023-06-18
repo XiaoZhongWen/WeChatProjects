@@ -1,13 +1,17 @@
 // pages/index/index.js
+
+var parser = require("../../utils/utils.js")
+
 Page({
 
   /**
    * Page initial data
    */
   data: {
-    focus: false,
-    showLeftDrawer: false,
+    focus: true,
+    holdKeyboard: true,
     showBottomDrawer: true,
+    showLeftDrawer: false,
     inputValue: '',
     album: [
       {
@@ -25,8 +29,9 @@ Page({
         "url": "",
         "count": 9,
         "isExpired": false
-      }
-    ]
+      },
+    ],
+    // _inputStack: []
   },
 
   /**
@@ -110,20 +115,90 @@ Page({
 
   // 显示|隐藏侧边栏
   showOrHidenLeftSlider(e) {
+    console.log("showOrHidenLeftSlider")
     this.setData({
       showLeftDrawer: !this.data.showLeftDrawer
     });
   },
 
-  // 显示|隐藏底边栏
-  showOrHidenBottomSlider(e) {
+  // 显示底边栏
+  showBottomSlider(e) {
     this.setData({
-      showBottomDrawer: !this.data.showBottomDrawer,
-      focus: !this.data.focus
+      showBottomDrawer: true,
+      holdKeyboard: true,
+      focus: true
+    });
+  },
+
+  // 隐藏底边栏
+  hidenBottomSlider(e) {
+    this.setData({
+      showBottomDrawer: false,
+      holdKeyboard: false,
+      focus: false
     });
   },
 
   onChange(e) {
     
+  },
+
+  appendUrl(e) {
+    if (e.detail === "done") {
+      const url = this.data.inputValue
+      const that = this
+      wx.request({
+        url: url,
+        success (res) {
+          if (res.statusCode === 200) {
+            const html = res.data
+            that.parseHtml(html)
+          }
+        }
+      })
+      this.setData({
+        inputValue: "",
+        holdKeyboard: false,
+        showBottomDrawer: false,
+        focus: false
+      })
+    } else {
+      var value = this.data.inputValue + e.detail
+      this.setData({
+        inputValue: value,
+        holdKeyboard: true,
+      }) 
+    }        
+  },
+
+  async parseHtml(html) {
+    parser.getTitle(html)
+    const imgUrls = parser.getImageUrls(html)
+    for (const url of imgUrls) {
+      try {
+        const path = await this.downloadFile(url)
+        console.log(path)
+      } catch(err) {
+        console.log(err)
+      }
+    }
+  },
+
+  downloadFile(url) {
+    return new Promise((resolve, reject) => {
+      wx.downloadFile({
+        url: url,
+        success: function(res) {
+          if (res.statusCode === 200) {
+            resolve(res.tempFilePath)
+          } else {
+            reject(new Error("statusCode=" + res.statusCode))
+          }
+        },
+        fail: function(err) {
+          reject(new Error("failed to download file: " + err))
+        }
+      })
+    })
   }
 })
